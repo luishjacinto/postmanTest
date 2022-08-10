@@ -1,0 +1,448 @@
+{
+	"info": {
+		"_postman_id": "0dfecae3-b60f-4dd0-adaf-b763708cbbbb",
+		"name": "Test API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sample endpoint: Returns details about a particular user",
+			"id": "cba4d468-abd8-4925-9d8c-864bb5234cd8",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/user?id=96372247",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "96372247",
+							"description": "(Required) ID of the user"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "97021415-a258-4a85-bdbc-083f9739a636",
+					"name": "Sample response: Details about a user by ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: basic",
+								"key": "Authorization",
+								"value": "Basic <credentials>"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/user?id=96372247",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "96372247"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"disabled": false,
+							"description": "A link to the next page of responses",
+							"key": "x-next",
+							"value": "tempor nostrud sed magna adipisicing"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n  \"id\": 10906906,\n  \"name\": \"minim reprehenderit\",\n  \"tag\": \"incididunt culpa\"\n}"
+				},
+				{
+					"id": "3610a6b8-99be-485f-abc9-45579fbb1929",
+					"name": "Unexpected error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: basic",
+								"key": "Authorization",
+								"value": "Basic <credentials>"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/user?id=96372247",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "96372247"
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n  \"code\": 13160037,\n  \"message\": \"elit e\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Routing",
+			"id": "72d2875b-5eb3-48ec-83c1-b039a4649458",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://router.hereapi.com/v8/routes?transportMode=truck&origin=52.5308,13.3847&destination=52.5323,13.3789&return=polyline&apikey=CW3kSkrH6pTGY1mGuXrn1MJbilHGrKDdovic-a5c7b0",
+					"protocol": "https",
+					"host": [
+						"router",
+						"hereapi",
+						"com"
+					],
+					"path": [
+						"v8",
+						"routes"
+					],
+					"query": [
+						{
+							"key": "transportMode",
+							"value": "truck"
+						},
+						{
+							"key": "origin",
+							"value": "52.5308,13.3847"
+						},
+						{
+							"key": "destination",
+							"value": "52.5323,13.3789"
+						},
+						{
+							"key": "return",
+							"value": "polyline"
+						},
+						{
+							"key": "apikey",
+							"value": "CW3kSkrH6pTGY1mGuXrn1MJbilHGrKDdovic-a5c7b0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"id": "9c4fe389-0251-46af-8900-44d376fcbd7e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Routing with Waypoints",
+			"id": "371b91d8-bbd2-4efe-902c-956c75b17b6e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://router.hereapi.com/v8/routes?origin=-31.70476998667482,-52.369640982821146&transportMode=truck&destination=-32.126455712760574,-52.11129423780268&via=-32.0999184,-52.1726505&via=-32.0482676,-52.1311879&via=-32.0490581,-52.1298961&via=-32.0461065,-52.1267624&via=-32.0416894,-52.1243687&via=-32.0312007,-52.0919824&via=-32.0353075,-52.0886208&return=polyline&apiKey=CW3kSkrH6pTGY1mGuXrn1MJbilHGrKDdovic-a5c7b0",
+					"protocol": "https",
+					"host": [
+						"router",
+						"hereapi",
+						"com"
+					],
+					"path": [
+						"v8",
+						"routes"
+					],
+					"query": [
+						{
+							"key": "origin",
+							"value": "-31.70476998667482,-52.369640982821146"
+						},
+						{
+							"key": "transportMode",
+							"value": "truck"
+						},
+						{
+							"key": "destination",
+							"value": "-32.126455712760574,-52.11129423780268"
+						},
+						{
+							"key": "via",
+							"value": "-32.0999184,-52.1726505"
+						},
+						{
+							"key": "via",
+							"value": "-32.0482676,-52.1311879"
+						},
+						{
+							"key": "via",
+							"value": "-32.0490581,-52.1298961"
+						},
+						{
+							"key": "via",
+							"value": "-32.0461065,-52.1267624"
+						},
+						{
+							"key": "via",
+							"value": "-32.0416894,-52.1243687"
+						},
+						{
+							"key": "via",
+							"value": "-32.0312007,-52.0919824"
+						},
+						{
+							"key": "via",
+							"value": "-32.0353075,-52.0886208"
+						},
+						{
+							"key": "return",
+							"value": "polyline"
+						},
+						{
+							"key": "routingMode",
+							"value": "fast",
+							"disabled": true
+						},
+						{
+							"key": "apiKey",
+							"value": "CW3kSkrH6pTGY1mGuXrn1MJbilHGrKDdovic-a5c7b0"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Waypoints Sequence",
+			"id": "036e1154-aff2-487a-96f1-431286ef16bc",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://wps.hereapi.com/v8/findsequence2?apiKey=CW3kSkrH6pTGY1mGuXrn1MJbilHGrKDdovic-a5c7b0&start=Partida;-31.70476998667482,-52.369640982821146&end=Chegada;-32.126455712760574,-52.11129423780268&hasTrailer=true&destination0=-32.0461065,-52.1267624&destination1=-32.0482676,-52.1311879&destination2=-32.0312007,-52.0919824&destination3=-32.0416894,-52.1243687&destination4=-32.0999184,-52.1726505&destination5=-32.0353075,-52.0886208&destination6=-32.0490581,-52.1298961&improveFor=distance&mode=fastest;truck;traffic:disabled;",
+					"protocol": "https",
+					"host": [
+						"wps",
+						"hereapi",
+						"com"
+					],
+					"path": [
+						"v8",
+						"findsequence2"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "CW3kSkrH6pTGY1mGuXrn1MJbilHGrKDdovic-a5c7b0"
+						},
+						{
+							"key": "start",
+							"value": "Partida;-31.70476998667482,-52.369640982821146"
+						},
+						{
+							"key": "end",
+							"value": "Chegada;-32.126455712760574,-52.11129423780268"
+						},
+						{
+							"key": "hasTrailer",
+							"value": "true"
+						},
+						{
+							"key": "limitedWeight",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "height",
+							"value": "4.00",
+							"disabled": true
+						},
+						{
+							"key": "width",
+							"value": "2.50",
+							"disabled": true
+						},
+						{
+							"key": "length",
+							"value": "18.35",
+							"disabled": true
+						},
+						{
+							"key": "destination0",
+							"value": "-32.0461065,-52.1267624"
+						},
+						{
+							"key": "destination1",
+							"value": "-32.0482676,-52.1311879"
+						},
+						{
+							"key": "destination2",
+							"value": "-32.0312007,-52.0919824"
+						},
+						{
+							"key": "destination3",
+							"value": "-32.0416894,-52.1243687"
+						},
+						{
+							"key": "destination4",
+							"value": "-32.0999184,-52.1726505"
+						},
+						{
+							"key": "destination5",
+							"value": "-32.0353075,-52.0886208"
+						},
+						{
+							"key": "destination6",
+							"value": "-32.0490581,-52.1298961"
+						},
+						{
+							"key": "improveFor",
+							"value": "distance"
+						},
+						{
+							"key": "mode",
+							"value": "fastest;truck;traffic:disabled;"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Geocode",
+			"id": "768f083d-435b-4859-9f1f-9982e9be57f1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Request-ID",
+						"value": "uXPocXsKlJ9z20HzzIab",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://geocode.search.hereapi.com/v1/geocode?q=Rua%2BUlysses%2BBatinga%252C%2B22%252C%2BFragata%2B96030740%2BPelotas%252FRS&apiKey=Eynpoq-svbAT7NZbsZhu7NhAK6i0j69fF60soGCq0ZI",
+					"protocol": "https",
+					"host": [
+						"geocode",
+						"search",
+						"hereapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"geocode"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Rua%2BUlysses%2BBatinga%252C%2B22%252C%2BFragata%2B96030740%2BPelotas%252FRS"
+						},
+						{
+							"key": "apiKey",
+							"value": "Eynpoq-svbAT7NZbsZhu7NhAK6i0j69fF60soGCq0ZI"
+						},
+						{
+							"key": "in",
+							"value": "countryCode%3ABR",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "username",
+				"value": "<Basic Auth Username>",
+				"type": "string"
+			},
+			{
+				"key": "password",
+				"value": "<Basic Auth Password>",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"id": "c658f9fe-38b3-4375-a1e0-5492c39eb4cc",
+			"key": "baseUrl",
+			"value": "localhost:3000",
+			"type": "string"
+		}
+	]
+}
