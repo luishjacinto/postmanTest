@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "Routing",
+			"name": "Routing API",
 			"request": {
 				"method": "GET",
 				"header": [],
