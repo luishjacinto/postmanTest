@@ -137,7 +137,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://router.hereapi.com/v8/routes?transportMode=truck&origin=52.5308,13.3847&destination=52.5323,13.3789&return=polyline&apikey=CW3kSkrH6pTGY1mGuXrn1MJbilHGrKDdovic-a5c7b0",
+					"raw": "https://router.hereapi.com/v8/routes?transportMode=car&origin=52.5308,13.3847&destination=52.5323,13.3789&return=polyline&apikey=CW3kSkrH6pTGY1mGuXrn1MJbilHGrKDdovic-a5c7b0",
 					"protocol": "https",
 					"host": [
 						"router",
@@ -151,7 +151,7 @@
 					"query": [
 						{
 							"key": "transportMode",
-							"value": "truck"
+							"value": "car"
 						},
 						{
 							"key": "origin",
